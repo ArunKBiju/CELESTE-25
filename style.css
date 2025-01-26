@@ -12,6 +12,7 @@
 html {
     scroll-behavior: smooth;
     overscroll-behavior: contain; 
+}
 
 *:focus
 {
@@ -22,7 +23,7 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   transform: translate3d(0, 0, 0); 
   margin: 0;
   padding: 0;
@@ -53,6 +54,12 @@ body {
 
 .title1:hover {
   filter: drop-shadow(5px 5px 3px rgba(255, 255, 255, 0.795));
+}
+  
+@media (max-width: 768px) {
+  .title1:hover {
+    filter: none; 
+  }
 }
 
 .logo
@@ -212,7 +219,6 @@ body {
     text-decoration: none;
     transition: 0.5s;
     overflow: hidden;
-    backdrop-filter: blur(15px);
   }
   
   .btn:hover a {
@@ -295,9 +301,73 @@ body {
       0 0 60px var(--clr);
   }
   
-  .btn:nth-child(3):before,
-  .btn:nth-child(3):after {
-    background: var(--clr);
-    box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+.btn:nth-child(3):before,
+.btn:nth-child(3):after 
+{
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr), 
       0 0 60px var(--clr);
-  }
+}
+
+.btn:nth-child(4):before,
+.btn:nth-child(4):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(5):before,
+.btn:nth-child(5):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(6):before,
+.btn:nth-child(6):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(7):before,
+.btn:nth-child(7):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(8):before,
+.btn:nth-child(8):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(9):before,
+.btn:nth-child(9):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(10):before,
+.btn:nth-child(10):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(11):before,
+.btn:nth-child(11):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
+
+.btn:nth-child(12):before,
+.btn:nth-child(12):after {
+  background: var(--clr);
+  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+    0 0 60px var(--clr);
+}
