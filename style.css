@@ -7,39 +7,92 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
     scroll-behavior: smooth;
-    overscroll-behavior: contain; 
+    overscroll-behavior: contain;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 *:focus
 {
   outline: none;
-  outline-offset: 2px;
+    outline-offset: 0;
 }
+
+@media (hover: none) and (pointer: coarse) {
+    *:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
 
 body {
   overflow-x: hidden;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   transform: translate3d(0, 0, 0); 
   margin: 0;
   padding: 0;
   width: 100%;
-    height: 100%;
-  background: #23074d; /* fallback for old browsers */
+  height: 100%;
+ /* background: #23074d;  */
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
   background: -webkit-linear-gradient(
     to right,
     #cc5333,
     #23074d
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to right,
     #cc5333,
     #23074d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.ibb.co/6vd5pd2/logo-with-name-removebg-preview.png);
+  background-size: contain;
+  background-position: center 100px;
+  background-repeat: no-repeat;
+  position: fixed;
+  background-attachment: fixed;
+  filter: blur(2px);
+  transform: scale(1.1);
+  z-index: -1;
+  user-select: none;
+  -webkit-user-select: none;
+  /*
+  background: -webkit-linear-gradient(
+    to right,
+    #cc5333,
+    #23074d
+  );
+  background: linear-gradient(
+    to right,
+    #cc5333,
+    #23074d
+  ); 
+  */
+}
+
+@media (max-width: 768px) {
+  body::before {
+    margin-top: 50px;
+  }
 }
 
 .title1 {
@@ -78,6 +131,7 @@ body {
 {
     width: 4%;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -115,6 +169,12 @@ body {
     transform: scale(2.5);
 }
 
+@media (max-width: 768px) {
+    .insta:hover {
+      transform: scale(1.8);
+  }
+}
+
 .check-info
 {
     font-family: Arial;
@@ -131,6 +191,12 @@ body {
 .whatsapp:hover
 {
     transform: scale(2.5);
+}
+
+@media (max-width: 768px) {
+    .whatsapp:hover {
+        transform: scale(1.8);
+  }
 }
 
 .contact
@@ -187,14 +253,102 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 0;
+    margin-top: 5%;
   }
   
+  @media (max-width:768px)
+  {
+    .container
+    {
+      margin-top: 0;
+    }
+  }
+
+/*  /// contact-button
+#contact-popup {
+  position: fixed;
+  right: 10px;
+  top: 60%;
+  z-index: 1000;
+}
+
+
+#contact-bot {
+  width: 100px;
+  cursor: pointer;
+  animation: fade-in-out 6s infinite; 
+}
+
+
+#contact-dialog {
+  position: absolute;
+  top: -10px;
+  left: -250px;
+  width: 220px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dialog-content {
+  flex: 1;
+  text-align: left;
+}
+
+.dialog-content a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dialog-content a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dialog-close {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-close #close-dialog {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff4444;
+  font-size: 18px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#contact-dialog.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes fade-in-out {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+*/
+
 
 .btn {
     position: relative;
-    width: 250px;
-    height: 50px;
+    width: 300px;
+    height: 80px;
     margin: 20px;
   }
   
@@ -219,7 +373,7 @@ body {
     text-decoration: none;
     transition: 0.5s;
     overflow: hidden;
-  }
+}
   
   .btn:hover a {
     letter-spacing: 3px;
@@ -325,48 +479,6 @@ body {
 
 .btn:nth-child(6):before,
 .btn:nth-child(6):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(7):before,
-.btn:nth-child(7):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(8):before,
-.btn:nth-child(8):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(9):before,
-.btn:nth-child(9):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(10):before,
-.btn:nth-child(10):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(11):before,
-.btn:nth-child(11):after {
-  background: var(--clr);
-  box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
-    0 0 60px var(--clr);
-}
-
-.btn:nth-child(12):before,
-.btn:nth-child(12):after {
   background: var(--clr);
   box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
     0 0 60px var(--clr);
