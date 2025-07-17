@@ -35,13 +35,6 @@ This website was designed to streamline multi-event registration, provide real-t
 
 ---
 
-## Credits
-
-Developed by **Arun K Biju**  
-Full Stack Developer | MERN Stack Enthusiast
-
----
-
 ## Screenshots
 
 <img width="3000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/bbcecef7-3f81-4a28-9c7c-b5d258858e31" />
@@ -50,3 +43,23 @@ Full Stack Developer | MERN Stack Enthusiast
 <img width="3000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/3b24a307-a761-4dbd-996a-b5863b30b47a" />
 <img width="3000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/e0354d1b-1bd6-4676-ad35-71d11b2895d3" />
 <img width="3000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/14b1ab78-f768-475d-8c15-f882c16d4395" />
+
+---
+
+## Credits
+
+Developed by **Arun K Biju**  
+Full Stack Developer | MERN Stack Enthusiast  
+📧 Email: [arunkbijuofficial@gmail.com](mailto:arunkbijuofficial@gmail.com)  
+🔗 Portfolio: [https://arunkbiju.github.io/My-Portfolio/](https://arunkbiju.github.io/My-Portfolio/)  
+🔗 LinkedIn: [https://www.linkedin.com/in/arun-k-biju](https://www.linkedin.com/in/arun-k-biju)
+
+---
+
+## License & Usage Notice
+
+This repository is not open-source.
+
+You are not permitted to copy, fork, or reuse any part of the code, design, or assets from this project without prior consent.
+
+All rights reserved © 2025 Arun K Biju.
